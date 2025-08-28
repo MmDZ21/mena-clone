@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 14px;
+}
+
+body {
+  @apply antialiased text-gray-800;
+}
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+.btn {
+  @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-medium shadow-soft transition hover:-translate-y-0.5 hover:shadow-md;
+}
+.btn-primary {
+  @apply bg-brand-700 text-white hover:bg-brand-800;
+}
+.btn-outline {
+  @apply border border-gray-300 hover:border-gray-400 rounded-2xl px-5 py-3;
+}
+.card {
+  @apply rounded-xl shadow-soft p-6;
+}
+.section {
+  @apply py-8 md:py-16;
+}
+.section-title {
+  @apply text-3xl md:text-4xl font-bold;
+}
+.section-subtitle {
+  @apply mt-3 text-base md:text-lg text-[#788791] leading-relaxed;
+}
+
+/* Simple marquee styles for the hero bullets */
+.badge {
+  @apply inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium;
+}
+
+/* Eyebrow/label (h6-style) */
+.eyebrow {
+  @apply text-sm md:text-base font-semibold text-brand-500;
+}
