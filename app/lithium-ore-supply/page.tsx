@@ -1,13 +1,15 @@
+import { lithiumPage } from "@/content/pages"
+
 export default function Page() {
   return (
     <div className="section">
       <div className="container prose">
-        <h1>Lithium Ore Supply</h1>
-        <p>We supply high-grade lithium ore with consistent specs and transparent documentation.</p>
+        <h1>{lithiumPage.title}</h1>
+        <p>{lithiumPage.description}</p>
         <ul>
-          <li>Quality control and assay verification</li>
-          <li>Secure logistics from mine to port</li>
-          <li>Incoterms tailored to buyer needs</li>
+          {lithiumPage.bullets.map((b, i) => (
+            <li key={i}>{b}</li>
+          ))}
         </ul>
       </div>
     </div>

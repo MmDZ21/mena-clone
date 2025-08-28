@@ -3,6 +3,7 @@ import "./globals.css"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { Manrope } from "next/font/google"
+import { siteConfig } from "@/content/site"
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -10,9 +11,9 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "MENA Resource — Clone",
-  description: "Corporate export & commodities website clone (layout & UX only).",
-  metadataBase: new URL("https://example.com")
+  title: `${siteConfig.name} — Clone`,
+  description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url)
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

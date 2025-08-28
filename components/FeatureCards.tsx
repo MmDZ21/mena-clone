@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { commitment, lithium } from "@/content/home";
 
 export function FeatureCards() {
   return (
@@ -19,21 +20,14 @@ export function FeatureCards() {
               {/* About label with decorative line */}
               <div className="flex pb-4 items-center gap-2">
                 <div className="w-4 h-0.5 bg-brand-500" />
-                <h6 className="eyebrow">About</h6>
+                <h6 className="eyebrow">{commitment.eyebrow}</h6>
               </div>
 
               {/* Main title */}
-              <h2 className="section-title">Our Commitment</h2>
+              <h2 className="section-title">{commitment.title}</h2>
 
               {/* Subtitle/description */}
-              <p className="section-subtitle max-w-md">
-                Benefiting from our global trade expertise, we proficiently
-                handle the supply of food, agricultural products and solid
-                mineral products. Our focus is on ensuring safe transaction
-                procedures and securing long-term contracts at the required
-                quantity and price, guaranteeing optimal quality and value for
-                our clients.{" "}
-              </p>
+              <p className="section-subtitle max-w-md">{commitment.description} </p>
             </div>
 
             {/* Right side: Image container - overlaps onto text on md+ */}
@@ -43,7 +37,7 @@ export function FeatureCards() {
             >
               <div className="rounded-xl relative w-full aspect-[3/2] md:h-full md:aspect-auto">
                 <Image
-                  src="/images/about.jpg"
+                  src={commitment.image}
                   alt="about"
                   fill
                   className="object-cover rounded-xl "
@@ -59,27 +53,18 @@ export function FeatureCards() {
           >
             {/* Title */}
             <div className="flex-1">
-              <h2 className="section-title">
-                Lithium Ore Delivered around the world
-              </h2>
+              <h2 className="section-title">{lithium.title}</h2>
 
               {/* Subtitle/description */}
-              <p className="section-subtitle max-w-md">
-                Embark on a journey of excellence with our premier exports of
-                high-grade lithium ore products. We take immense pride in
-                delivering unparalleled quality to our esteemed global
-                clientele. Just as the most valuable ores undergo meticulous
-                refinement, our dedication to ensuring top-tier quality sets us
-                apart.
-              </p>
+              <p className="section-subtitle max-w-md">{lithium.description}</p>
 
-              <button className="btn btn-outline mt-8">Learn More</button>
+              <a href={lithium.cta.href} className="btn btn-outline mt-8">{lithium.cta.label}</a>
             </div>
 
             {/* World map image */}
             <div className="relative flex-1" id="world-map-container">
               <Image
-                src="/images/world-map.png"
+                src={lithium.image}
                 alt="about"
                 width={1200}
                 height={900}

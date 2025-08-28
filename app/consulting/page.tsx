@@ -1,14 +1,7 @@
 import Link from "next/link"
+import { services } from "@/content/pages"
 
 export default function Page() {
-  const services = [
-    { href: "/consulting/world-class-export-consulting-service", title: "World-Class Export Consulting" },
-    { href: "/consulting/feasibility-study-report-service", title: "Feasibility Study & Report Service" },
-    { href: "/consulting/trade-licence-registration-service", title: "Trade Licence Registration Service" },
-    { href: "/consulting/due-diligence-checks", title: "Due Diligence Checks" },
-    { href: "/consulting/export-investors", title: "Export Investors" },
-    { href: "/consulting/brokerage-program", title: "Brokerage Program" },
-  ]
   return (
     <div className="section">
       <div className="container">

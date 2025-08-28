@@ -7,20 +7,9 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import { heroSlides } from "@/content/home"
 
-type Slide = {
-  image: string
-  headline: string
-  sub: string
-  primaryHref?: string
-  secondaryHref?: string
-}
-
-const SLIDES: Slide[] = [
-  { image: "/hero/slide-1.jpg", headline: "Benefiting from our global trade expertise", sub: "We handle the supply of food, agricultural products and solid mineral products with safe procedures and long-term contracts.", primaryHref: "/lithium-ore-supply", secondaryHref: "/contact-us" },
-  { image: "/hero/slide-2.jpg", headline: "Safe procedures, reliable delivery", sub: "Documentation, QC, and logistics designed for long-term partnerships.", primaryHref: "/lithium-ore-supply", secondaryHref: "/contact-us" },
-  { image: "/hero/slide-3.jpg", headline: "From inquiry to shipment", sub: "End-to-end support across the export lifecycle.", primaryHref: "/consulting/export-investors", secondaryHref: "/consulting/brokerage-program" },
-]
+// slides provided by content layer
 
 export function Hero() {
   return (
@@ -37,7 +26,7 @@ export function Hero() {
         pagination={{ clickable: true }}
         className="hero-swiper"  // use CSS below
       >
-        {SLIDES.map((s, i) => (
+        {heroSlides.map((s, i) => (
           <SwiperSlide key={i} className="!h-full">  {/* ensure slide fills the swiper */}
             {/* RELATIVE WRAPPER WITH FIXED HEIGHT */}
             <div className="relative h-[70vh] w-full md:h-[78vh]">
@@ -119,7 +108,6 @@ export function Hero() {
     }
   }
 `}</style>
-
     </section>
   )
 }

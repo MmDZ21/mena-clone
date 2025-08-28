@@ -43,3 +43,4 @@ body {
 .eyebrow {
   @apply text-sm md:text-base font-semibold text-brand-500;
 }
+
